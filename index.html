@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+    />
+
+    <script src="node_modules/flowbite/dist/flowbite.js"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {},
+        },
+      };
+    </script>
+
+    <title>Netbook</title>
+
+    <style type="text/tailwindcss">
+      /*  */
+    </style>
+  </head>
+  <body>
+    <!-- start -->
+
+    <!-- Navbar goes here -->
+    <nav class="bg-white shadow-lg">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between">
+          <div class="flex space-x-6">
+            <div>
+              <!-- Website Logo -->
+              <a href="#" class="flex items-center py-4 px-2">
+                <img
+                  src="assets/images/logo.svg"
+                  alt="Logo"
+                  class="h-8 w-4/5 mr-2"
+                />
+              </a>
+            </div>
+            <!-- Primary Navbar items -->
+            <div class="hidden md:flex items-center space-x-1">
+              <a href="#" class="py-4 px-2 text-sky-500 font-semibold">Home</a>
+
+              <a href="#">
+                <button
+                  id="dropdownDefault"
+                  data-dropdown-toggle="dropdown"
+                  class="py-4 px-2 text-gray-500 font-semibold hover:text-sky-500 text-center inline-flex items-center"
+                  type="button"
+                >
+                  Community
+                  <svg
+                    class="ml-1 mt-1 w-3 h-3"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    ></path>
+                  </svg>
+                </button>
+              </a>
+
+              <div
+                id="dropdown"
+                class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700"
+              >
+                <ul
+                  class="py-1 text-sm bg-white dark:text-gray-200 rounded"
+                  aria-labelledby="dropdownDefault"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-2 px-4 hover:bg-gray-100 text-gray-400"
+                      >Item 1</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-2 px-4 hover:bg-gray-100 text-gray-400"
+                      >Item 1</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-2 px-4 hover:bg-gray-100 text-gray-400"
+                      >Item 2</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <a
+                href=""
+                class="py-4 px-2 text-gray-500 font-semibold hover:text-sky-500 transition duration-300"
+                >Blog</a
+              >
+              <a
+                href=""
+                class="py-4 px-2 text-gray-500 font-semibold hover:text-sky-500 transition duration-300"
+                >Events</a
+              >
+            </div>
+          </div>
+          <!-- Secondary Navbar items -->
+          <div class="hidden md:flex items-center space-x-3">
+            <div class="py-2 px-2 relative mx-auto text-gray-600">
+              <input
+                class="border-2 border-gray-300 bg-white h-10 px-5 pr-9 rounded-lg text-sm focus:outline-none"
+                type="search"
+                name="search"
+                placeholder="Search"
+              />
+              <button type="submit" class="absolute right-0 top-0 mt-5 mr-5">
+                <svg
+                  class="text-gray-600 h-4 w-4 fill-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  version="1.1"
+                  id="Capa_1"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 56.966 56.966"
+                  style="enable-background: new 0 0 56.966 56.966"
+                  xml:space="preserve"
+                  width="512px"
+                  height="512px"
+                >
+                  <path
+                    d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <a
+              href=""
+              class="py-2 px-4 font-medium text-white bg-blue-600 rounded-md hover:bg-sky-400 transition duration-300"
+              >Log In</a
+            >
+          </div>
+          <!-- Mobile menu button -->
+          <div class="md:hidden flex items-center">
+            <button class="outline-none mobile-menu-button">
+              <svg
+                class="w-6 h-6 text-gray-500 hover:text-sky-500"
+                x-show="!showMenu"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- mobile menu -->
+      <div class="hidden mobile-menu">
+        <ul class="">
+          <li class="active">
+            <a
+              href="index.html"
+              class="block text-sm px-2 py-4 text-white bg-sky-500 font-semibold"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#services"
+              class="block text-sm px-2 py-4 hover:bg-sky-500 transition duration-300"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="block text-sm px-2 py-4 hover:bg-sky-500 transition duration-300"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="block text-sm px-2 py-4 hover:bg-sky-500 transition duration-300"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Konten 1 -->
+    <div class="container px-16 py-16 border-red-500">
+      <div class="flex flex-row">
+        <div class="border-sky-500 basis-6/12 py-10">
+          <div class="min-h-full border-yellow-500">
+            <div class="flex flex-col px-4">
+              <div>
+                <button
+                  type="button"
+                  class="text-blue-600 bg-sky-100 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                >
+                  Netbook community
+                </button>
+              </div>
+              <div class="mt-2 mb-4">
+                <p class="font-bold text-5xl">Your Solutions For Community!</p>
+              </div>
+              <div>
+                <p class="font-normal text-slate-500">
+                  More than 2 billion people in over countries use socibook to
+                  stay in touch with friends & family.
+                </p>
+              </div>
+              <div class="flex flex-row mt-6">
+                <div>
+                  <button
+                    type="button"
+                    class="w-full h-16 text-white bg-blue-700 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 mr-2 mb-2"
+                  >
+                    About More
+                  </button>
+                </div>
+                <div class="ml-6">
+                  <button
+                    type="button"
+                    class="w-full h-16 text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-800"
+                  >
+                    Invite Friend
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-sky-500 basis-7/12">
+          <div class="flex justify-center items-center min-h-full">
+            <img class="w-9/12 mb-10" src="assets/images/bg.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Konten 2 -->
+    <div class="container px-16 py-16 border-lime-500">
+      <div class="flex flex-row">
+        <div class="border-sky-500 basis-6/12 py-10">
+          <div class="min-h-full border-yellow-500">
+            <div class="flex flex-col px-4">
+              <div>
+                <p class="font-semibold text-blue-600 text-lg">
+                  Whats Netboks?
+                </p>
+              </div>
+              <div class="mt-2 mb-4">
+                <p class="font-bold text-4xl">
+                  Why Join to Netbook Social Network?
+                </p>
+              </div>
+              <div>
+                <p class="font-normal text-slate-500">
+                  Recent surveys have indicated that small businesses recognise
+                  the need they have to connect with consumer.
+                </p>
+              </div>
+
+              <div class="mt-6">
+                <div class="w-full bg-white rounded-lg">
+                  <ul class="">
+                    <li
+                      class="py-3 hover:text-blue-600 cursor-pointer font-semibold flex gap-[1.225rem] after:inline-block after:h-full items-center after:w-full before:content-[url('assets/images/list.png')]"
+                    >
+                      Groups
+                    </li>
+                    <li
+                      class="py-3 hover:text-blue-600 cursor-pointer font-semibold flex gap-[1.225rem] after:inline-block after:h-full items-center after:w-full before:content-[url('assets/images/list.png')]"
+                    >
+                      Messages
+                    </li>
+                    <li
+                      class="py-3 hover:text-blue-600 cursor-pointer font-semibold flex gap-[1.225rem] after:inline-block after:h-full items-center after:w-full before:content-[url('assets/images/list.png')]"
+                    >
+                      Share
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-sky-500 basis-7/12">
+          <div class="flex">
+            <div
+              class="shrink w-80 h-screen border-sky-500 p-3 flex items-center"
+            >
+              <div>
+                <img src="assets/images/social1.png" alt="" />
+              </div>
+            </div>
+            <div class="shrink w-64 h-screen border-sky-500 flex items-center">
+              <div class="flex flex-col">
+                <div class="border-red-500">
+                  <img src="assets/images/social2.png" alt="" />
+                </div>
+                <div class="mt-5 border-red-500">
+                  <img src="assets/images/social3.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="flex-none"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  Konten 3 -->
+
+    <div class="container px-16 py-16">
+      <div class="flex flex-row">
+        <div class="border-sky-500 basis-8/12 pb-10">
+          <div class="min-h-full border-yellow-500 mr-10">
+            <div class="flex flex-row px-8">
+              <div>
+                <div class="flex flex-col px-4">
+                  <div
+                    class="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md w-64"
+                  >
+                    <a href="#">
+                      <h5 class="mb-2 text-2xl font-bold tracking-tight py-1">
+                        <div class="flex items-center">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="26"
+                            height="25"
+                            fill="none"
+                            viewBox="0 0 26 25"
+                          >
+                            <path
+                              stroke="#217BF4"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="1.5"
+                              d="M13.482 19.861L19 23.356c.705.447 1.58-.217 1.371-1.04l-1.594-6.27a.958.958 0 01.31-.97l4.948-4.118c.65-.541.314-1.62-.521-1.674l-6.46-.42a.92.92 0 01-.793-.585l-2.41-6.067a.91.91 0 00-1.7 0L9.74 8.28a.92.92 0 01-.793.586l-6.46.419c-.835.054-1.17 1.133-.52 1.674l4.946 4.117a.958.958 0 01.31.97L5.747 21.86c-.252.988.799 1.785 1.645 1.25l5.127-3.249a.899.899 0 01.964 0v0z"
+                            ></path>
+                          </svg>
+                          <span class="font-semibold mr-2 px-2.5 py-0.5 ml-3"
+                            >4.8 Rating</span
+                          >
+                        </div>
+                      </h5>
+                    </a>
+                    <div class="flex flex-col py-4">
+                      <div class="flex -space-x-3">
+                        <img
+                          class="w-8 h-8 rounded-full border-white dark:border-gray-800"
+                          src="assets/images/people1.png"
+                          alt=""
+                        />
+                        <img
+                          class="w-8 h-8 rounded-full border-white dark:border-gray-800"
+                          src="assets/images/people2.png"
+                          alt=""
+                        />
+                        <img
+                          class="w-8 h-8 rounded-full border-white dark:border-gray-800"
+                          src="assets/images/people3.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="flex flex-row">
+                        <div class="font-medium text-[#217bf4] mr-1">+836</div>
+                        <div class="text-slate-600">Members</div>
+                      </div>
+                    </div>
+
+                    <p
+                      class="mb-5 font-normal text-gray-700 dark:text-gray-400 py-1 mt-2"
+                    >
+                      Here are the biggest enterprise technology acquisitions of
+                      2021 so far, in reverse chronological order.
+                    </p>
+
+                    <a
+                      href="#"
+                      class="w-full mb-2 inline-flex items-center text-sm font-medium text-center text-slate-500 bg-white rounded-lg hover:text-blue-600 cursor-pointer"
+                    >
+                      Join Our Community
+                      <svg
+                        aria-hidden="true"
+                        class="ml-2 mt-2 -mr-1 w-3 h-3"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="flex flex-col px-4">
+                  <div
+                    class="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md w-64"
+                  >
+                    <a href="#">
+                      <h5 class="mb-2 text-2xl font-bold tracking-tight py-1">
+                        <div class="flex items-center">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="28"
+                            height="28"
+                            fill="none"
+                            viewBox="0 0 28 28"
+                          >
+                            <path
+                              stroke="#217BF4"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M6.125 6.125v6.026c0 4.342 3.473 7.942 7.815 7.974a7.875 7.875 0 007.935-7.875V6.125A.875.875 0 0021 5.25H7a.875.875 0 00-.875.875zM10.5 24.5h7M14 20.125V24.5"
+                            ></path>
+                            <path
+                              stroke="#217BF4"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M21.68 14h1.07a3.5 3.5 0 003.5-3.5V8.75a.875.875 0 00-.875-.875h-3.5M6.338 14H5.234a3.5 3.5 0 01-3.5-3.5V8.75a.875.875 0 01.875-.875h3.5"
+                            ></path>
+                          </svg>
+                          <span class="font-semibold mr-2 px-2.5 py-0.5 ml-3"
+                            >Awards</span
+                          >
+                        </div>
+                      </h5>
+                    </a>
+                    <div class="flex flex-col py-4">
+                      <div class="flex flex-row">
+                        <div>
+                          <img
+                            class="w-6 mr-2"
+                            src="assets/images/Ellipse_14.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="text-slate-600 mr-2">Best of</div>
+                        <div class="font-medium text-[#217bf4] mr-2">2021</div>
+                        <div class="text-slate-600">on Github</div>
+                      </div>
+                    </div>
+
+                    <p
+                      class="mb-5 font-normal text-gray-700 dark:text-gray-400 py-1 mt-2"
+                    >
+                      More than 2 billion we people over countries use socibooks
+                      we to stay in
+                    </p>
+
+                    <a
+                      href="#"
+                      class="w-full mb-2 inline-flex items-center text-sm font-medium text-center text-slate-500 bg-white rounded-lg hover:text-blue-600 cursor-pointer"
+                    >
+                      Go To Awards
+                      <svg
+                        aria-hidden="true"
+                        class="ml-2 mt-1 -mr-1 w-3 h-3"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-sky-500 basis-5/12">
+          <div class="flex flex-col px-4">
+            <div>
+              <p class="font-semibold text-blue-600 text-lg">Our Achievement</p>
+            </div>
+            <div class="mt-2 mb-4">
+              <p class="font-bold text-4xl">
+                We are Connecting You To The Digital Life.
+              </p>
+            </div>
+            <div>
+              <p class="font-normal text-slate-500">
+                The scope the Social Media becomes crucial Is helps the business
+                to directly engage with their needs and wants.
+              </p>
+            </div>
+
+            <div class="flex">
+              <div class="w-80 h-80 border-sky-500 flex items-center">
+                <div>
+                  <button
+                    type="button"
+                    class="h-16 text-white bg-blue-500 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 mr-2 mb-2"
+                  >
+                    Discover Me
+
+                    <svg
+                      aria-hidden="true"
+                      class="ml-2 mt-1 -mr-1 w-3 h-3"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Konten 4 -->
+    <div class="container border-red-500">
+      <div class="px-16 mt-16">
+        <div class="text-center border-blue-600">
+          <p class="font-semibold text-blue-600 text-lg">Our Community</p>
+          <p class="font-bold text-4xl py-5">Community Main Feature</p>
+
+          <div class="flex justify-center mb-10">
+            <div class="flex-none w-14 h-14"></div>
+            <div class="shrink w-80 h-auto">
+              <p class="font-normal text-slate-500">
+                The wise man therefore always holds in these matters to this
+                principle of selection.
+              </p>
+            </div>
+            <div class="flex-none w-14 h-14"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="px-20">
+        <div class="flex flex-row mb-16">
+          <div class="basis-6/12 px-5">
+            <div
+              class="flex py-5 h-full px-10 bg-white rounded-lg border border-gray-200 shadow-md"
+            >
+              <a href="#">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight py-1">
+                  <div class="flex items-start">
+                    <button
+                      type="button"
+                      class="text-white bg-blue-700 focus:ring-4 focus:ring-blue-300focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="30"
+                        height="30"
+                        fill="none"
+                        viewBox="0 0 35 28"
+                      >
+                        <path
+                          fill="#fff"
+                          fill-rule="evenodd"
+                          d="M11.635 14.305a6.37 6.37 0 100-12.74 6.37 6.37 0 000 12.74z"
+                          clip-rule="evenodd"
+                        ></path>
+                        <path
+                          fill="#fff"
+                          fill-rule="evenodd"
+                          d="M17.164 13.592a7.988 7.988 0 01-5.529 2.205 7.988 7.988 0 01-5.53-2.205 6.55 6.55 0 00-.732-.152c-.24-.031-.471-.031-.687.002-.215.033-.414.1-.647.183a4.26 4.26 0 00-.83.381c-.33.2-.73.498-1.11.996-.382.497-.746 1.194-1.078 2.023-.332.83-.63 1.792-.796 2.72-.166.929-.2 1.825-.215 2.505-.018.68-.018 1.145.05 1.593.065.447.198.878.497 1.31.298.43.762.862 1.31 1.194.547.331 1.177.564 2.04.68.862.116 1.956.116 3.283.116h8.89c1.326 0 2.42 0 3.283-.116s1.493-.349 2.04-.68c.548-.332 1.012-.763 1.31-1.195.3-.431.431-.862.498-1.31.066-.447.066-.912.05-1.592-.017-.68-.05-1.576-.216-2.504a14.288 14.288 0 00-.796-2.72c-.332-.83-.696-1.527-1.078-2.024a3.895 3.895 0 00-1.11-.996 4.26 4.26 0 00-.83-.38 3.43 3.43 0 00-.647-.184 2.467 2.467 0 00-.687-.002 6.55 6.55 0 00-.733.152zM18.424 11.074a6.369 6.369 0 0010.66-4.705 6.369 6.369 0 00-11.74-3.42 6.355 6.355 0 012.075 4.705 6.341 6.341 0 01-.995 3.42z"
+                          clip-rule="evenodd"
+                        ></path>
+                        <path
+                          fill="#fff"
+                          fill-rule="evenodd"
+                          d="M27.893 12.26a7.99 7.99 0 01-5.338 2.204l.229.274c.381.497.746 1.194 1.078 2.024.332.829.63 1.791.796 2.72.166.928.2 1.825.216 2.504.017.68.017 1.145-.05 1.593a2.963 2.963 0 01-.498 1.31 4.132 4.132 0 01-.908.923h3.39c1.328 0 2.423 0 3.285-.116.863-.116 1.494-.349 2.041-.68.548-.332 1.012-.763 1.31-1.195.3-.431.432-.862.498-1.31.067-.447.067-.912.05-1.592s-.05-1.576-.215-2.505a14.294 14.294 0 00-.797-2.72c-.332-.83-.697-1.526-1.078-2.023a3.893 3.893 0 00-1.112-.996 4.276 4.276 0 00-.83-.381 3.44 3.44 0 00-.646-.183 2.472 2.472 0 00-.688-.003c-.24.031-.486.091-.733.153z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+
+                    <div class="font-semibold mr-2 px-2.5 py-0.5 ml-3">
+                      <div class="flex flex-col">
+                        <div>Members, Friends</div>
+                        <div class="font-normal text-lg py-3 text-slate-500">
+                          More than 2 billion people in over countries use
+                          socibook to stay in touch with friends & family.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </h5>
+              </a>
+            </div>
+          </div>
+          <div class="basis-6/12 px-5">
+            <div
+              class="flex h-full py-5 px-10 bg-white rounded-lg border border-gray-200 shadow-md"
+            >
+              <a href="#">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight py-1">
+                  <div class="flex items-start">
+                    <button
+                      type="button"
+                      class="text-white bg-[#FF858A] focus:ring-4 focus:ring-blue-300focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="30"
+                        height="30"
+                        fill="none"
+                        viewBox="0 0 34 21"
+                      >
+                        <path
+                          fill="#fff"
+                          fill-rule="evenodd"
+                          d="M17.193 10.75a4.787 4.787 0 100-9.573 4.787 4.787 0 000 9.573z"
+                          clip-rule="evenodd"
+                        ></path>
+                        <path
+                          fill="#fff"
+                          fill-rule="evenodd"
+                          d="M21.348 10.214a6.003 6.003 0 01-4.156 1.658 6.003 6.003 0 01-4.155-1.658 4.898 4.898 0 00-.55-.114 1.853 1.853 0 00-.517.002 2.58 2.58 0 00-.486.137 3.206 3.206 0 00-.623.287c-.25.15-.549.374-.835.748-.287.373-.56.897-.81 1.52-.25.624-.474 1.347-.598 2.045-.125.698-.15 1.371-.162 1.882-.013.511-.013.86.037 1.197.05.336.15.66.374.984.224.325.573.649.984.898.412.25.885.424 1.534.51.648.088 1.47.088 2.467.088H20.533c.997 0 1.82 0 2.467-.087.648-.087 1.122-.262 1.534-.511.41-.25.76-.573.984-.898.225-.324.324-.648.374-.984.05-.337.05-.686.037-1.197-.012-.51-.037-1.184-.162-1.882a10.733 10.733 0 00-.598-2.044c-.25-.624-.523-1.148-.81-1.52a2.925 2.925 0 00-.835-.75 3.208 3.208 0 00-.623-.286 2.581 2.581 0 00-.486-.137 1.853 1.853 0 00-.517-.002c-.18.023-.365.068-.55.114zM22.293 8.322a4.786 4.786 0 10-.812-6.105 4.776 4.776 0 011.56 3.535c0 .946-.275 1.828-.748 2.57zM11.707 8.322a4.786 4.786 0 11.812-6.105 4.775 4.775 0 00-1.56 3.535c0 .946.275 1.828.748 2.57z"
+                          clip-rule="evenodd"
+                        ></path>
+                        <path
+                          fill="#fff"
+                          fill-rule="evenodd"
+                          d="M29.41 9.214a6.004 6.004 0 01-4.012 1.656l.172.206c.287.374.56.898.81 1.521.25.623.474 1.346.599 2.044.124.698.15 1.371.162 1.882.012.511.012.86-.038 1.197-.05.337-.149.66-.374.985a3.104 3.104 0 01-.683.693h2.548c.998 0 1.82 0 2.469-.087.648-.087 1.122-.262 1.534-.511.411-.25.76-.573.984-.898.225-.324.325-.648.374-.984.05-.337.05-.686.038-1.197-.013-.51-.038-1.184-.162-1.882a10.74 10.74 0 00-.599-2.044c-.249-.624-.523-1.148-.81-1.52a2.928 2.928 0 00-.835-.75 3.212 3.212 0 00-.624-.286 2.58 2.58 0 00-.486-.137 1.856 1.856 0 00-.517-.002c-.18.023-.365.068-.55.114zM4.59 9.214a6.005 6.005 0 004.012 1.656l-.172.206c-.287.374-.56.898-.81 1.521-.25.623-.474 1.346-.599 2.044-.124.698-.15 1.371-.162 1.882-.012.511-.012.86.038 1.197.05.337.149.66.374.985.167.241.403.483.683.693H5.406c-.998 0-1.82 0-2.469-.087-.648-.087-1.122-.262-1.534-.511a3.284 3.284 0 01-.984-.898 2.227 2.227 0 01-.375-.984c-.05-.337-.05-.686-.037-1.197.012-.51.037-1.184.162-1.882a10.74 10.74 0 01.598-2.044c.25-.624.524-1.148.81-1.52.287-.375.587-.6.836-.75.25-.149.449-.224.624-.286a2.58 2.58 0 01.486-.137c.162-.025.336-.025.516-.002s.366.068.551.114z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+
+                    <div class="font-semibold mr-2 px-2.5 py-0.5 ml-3">
+                      <div class="flex flex-col">
+                        <div>Groups</div>
+                        <div class="font-normal text-lg py-3 text-slate-500">
+                          Your users can create groups to let other users to
+                          join and talk
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </h5>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-row mb-16">
+          <div class="basis-6/12 px-5">
+            <div
+              class="flex h-full py-5 px-10 bg-white rounded-lg border border-gray-200 shadow-md"
+            >
+              <a href="#">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight py-1">
+                  <div class="flex items-start">
+                    <button
+                      type="button"
+                      class="text-white bg-[#FFD085] focus:ring-4 focus:ring-blue-300focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="30"
+                        height="30"
+                        fill="none"
+                        viewBox="0 0 34 28"
+                      >
+                        <path
+                          fill="#fff"
+                          d="M34 10.933v9.59a2.618 2.618 0 01-2.615 2.615h-.872v3.487a.873.873 0 01-1.43.67l-4.989-4.157h-8.402a2.618 2.618 0 01-2.615-2.615v-.872h8.718a4.364 4.364 0 004.359-4.359V8.318h5.23A2.618 2.618 0 0134 10.933zm-12.205 6.975H9.99l-4.97 5.797a.872.872 0 01-1.534-.567v-5.23h-.872A2.619 2.619 0 010 15.292V3.087A2.618 2.618 0 012.615.472h19.18a2.618 2.618 0 012.615 2.615v12.205a2.618 2.618 0 01-2.615 2.616zm-2.616-6.975a.872.872 0 00-.871-.872H6.103a.872.872 0 000 1.744h12.205a.871.871 0 00.872-.872zm0-4.359a.872.872 0 00-.871-.872H6.103a.872.872 0 000 1.744h12.205a.872.872 0 00.872-.872z"
+                        ></path>
+                      </svg>
+                    </button>
+
+                    <div class="font-semibold mr-2 px-2.5 py-0.5 ml-3">
+                      <div class="flex flex-col">
+                        <div>Forum</div>
+                        <div class="font-normal text-lg py-3 text-slate-500">
+                          Forum is ready by BBPress. Your users can make topics
+                          and talk.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </h5>
+              </a>
+            </div>
+          </div>
+          <div class="basis-6/12 px-5">
+            <div
+              class="flex py-5 h-full px-10 bg-white rounded-lg border border-gray-200 shadow-md"
+            >
+              <a href="#">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight py-1">
+                  <div class="flex items-start">
+                    <button
+                      type="button"
+                      class="text-white bg-[#5CA1FE] focus:ring-4 focus:ring-blue-300focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="30"
+                        height="30"
+                        fill="none"
+                        viewBox="0 0 35 34"
+                      >
+                        <path
+                          fill="#fff"
+                          d="M8.29 7.862l2.15 2.15a3.635 3.635 0 011.12-2.016c1.433-1.344 3.762-1.389 5.196-.045l.268.269c.583.672.941 1.523.941 2.419 0 .18 0 .358-.045.493a3.647 3.647 0 01-1.075 2.24 3.662 3.662 0 01-1.971 1.03l2.15 2.15 2.598-2.598c.045-.045.045-.045.09-.045h.224c.09.045.18.134.18.269 0 .851.358 1.612.94 2.195.627.627 1.433.94 2.284.94h.045c.269 0 .493-.044.762-.089a2.95 2.95 0 001.523-.896 3.305 3.305 0 00.761-2.912 3.415 3.415 0 00-.761-1.433c-.224-.224-.493-.448-.762-.583a5.968 5.968 0 00-.806-.313c-.134-.045-.269-.045-.403-.09h-.314a.302.302 0 01-.269-.179c-.044-.09 0-.224.045-.313l2.598-2.599L18.503.605a2.11 2.11 0 00-2.957 0L8.289 7.862z"
+                        ></path>
+                        <path
+                          fill="#fff"
+                          d="M33.418 15.522L26.16 8.265l-2.15 2.15c.761.134 1.478.537 2.015 1.075 1.344 1.433 1.389 3.763.045 5.196-.717.762-1.657 1.21-2.688 1.21a3.522 3.522 0 01-2.732-1.12 3.662 3.662 0 01-1.03-1.971L17.426 17l2.598 2.598c.09.09.09.224.044.314a.302.302 0 01-.268.179c-.851 0-1.613.358-2.195.94-.627.628-.94 1.434-.94 2.33 0 .85.357 1.657 1.03 2.284.178.18.402.359.671.448 1.165.628 2.688.448 3.718-.492a3.053 3.053 0 00.986-2.24c0-.135.09-.224.179-.269.09-.045.224 0 .314.045l2.598 2.598 7.257-7.257c.403-.403.627-.94.627-1.478 0-.582-.224-1.075-.627-1.478z"
+                        ></path>
+                        <path
+                          fill="#fff"
+                          d="M23.607 23.988a3.636 3.636 0 01-1.12 2.016c-1.433 1.344-3.762 1.389-5.196.045-.761-.717-1.21-1.658-1.21-2.688 0-.761.225-1.523.628-2.15.134-.224.313-.403.493-.582a3.663 3.663 0 011.97-1.03l-2.15-2.196-2.598 2.598a.236.236 0 01-.313.09.302.302 0 01-.18-.269c0-.85-.358-1.612-.94-2.195-.627-.627-1.434-.94-2.33-.94h-.313c-.762.09-1.434.447-1.971.985-.851.896-1.03 2.24-.627 3.36 0 .044.045.09.045.134 0 .045.044.09.044.134.135.27.314.538.538.762a3.053 3.053 0 002.24.985c.134 0 .224.09.268.18.045.09 0 .224-.044.313l-2.599 2.598 7.257 7.257a2.11 2.11 0 002.957 0l7.257-7.257-2.106-2.15z"
+                        ></path>
+                        <path
+                          fill="#fff"
+                          d="M.627 18.478l7.257 7.257 2.15-2.15a3.636 3.636 0 01-2.016-1.12c-1.343-1.433-1.388-3.763-.044-5.196.716-.762 1.657-1.21 2.687-1.21 1.03 0 2.016.359 2.733 1.12.537.538.896 1.21 1.03 1.971l2.15-2.15-2.598-2.598a.276.276 0 01-.045-.314.302.302 0 01.27-.179c.85 0 1.612-.358 2.194-.94.09-.09.135-.18.224-.224.493-.583.717-1.3.717-2.061 0-.851-.358-1.658-1.03-2.285-1.21-1.12-3.18-1.12-4.346.045a3.053 3.053 0 00-.985 2.24c0 .134-.09.224-.18.269-.089.045-.223 0-.313-.045L7.884 8.31.627 15.522C.224 15.925 0 16.418 0 17s.224 1.075.627 1.478z"
+                        ></path>
+                      </svg>
+                    </button>
+
+                    <div class="font-semibold mr-2 px-2.5 py-0.5 ml-3">
+                      <div class="flex flex-col">
+                        <div>Custom Module</div>
+                        <div class="font-normal text-lg py-3 text-slate-500">
+                          You can create Members, Groups Module. We already
+                          created 3 modules. It's by drag & drop live builder.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </h5>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-row mb-16">
+          <div class="basis-6/12 px-5">
+            <div
+              class="flex h-full py-5 px-10 bg-white rounded-lg border border-gray-200 shadow-md"
+            >
+              <a href="#">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight py-1">
+                  <div class="flex items-start">
+                    <button
+                      type="button"
+                      class="text-white bg-[#FF858A] focus:ring-4 focus:ring-blue-300focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="30"
+                        height="30"
+                        fill="none"
+                        viewBox="0 0 27 34"
+                      >
+                        <path
+                          fill="#fff"
+                          fill-rule="evenodd"
+                          d="M3.979 0A3.979 3.979 0 000 3.979V30.02A3.979 3.979 0 003.979 34h18.808a3.979 3.979 0 003.979-3.979V3.98A3.979 3.979 0 0022.787 0H3.98zm2.893 4.34a2.532 2.532 0 100 5.064 2.532 2.532 0 000-5.064zM4.34 17a2.532 2.532 0 115.064 0 2.532 2.532 0 01-5.064 0zm2.532 7.596a2.532 2.532 0 100 5.064 2.532 2.532 0 000-5.064zm7.234-18.809a1.085 1.085 0 000 2.17h8.681a1.085 1.085 0 000-2.17h-8.68zM13.021 17c0-.6.486-1.085 1.085-1.085h8.681a1.085 1.085 0 110 2.17h-8.68c-.6 0-1.086-.486-1.086-1.085zm1.085 9.043a1.085 1.085 0 100 2.17h8.681a1.085 1.085 0 000-2.17h-8.68z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+
+                    <div class="font-semibold mr-2 px-2.5 py-0.5 ml-3">
+                      <div class="flex flex-col">
+                        <div>List Builder</div>
+                        <div class="font-normal text-lg py-3 text-slate-500">
+                          Members, Groups list can be modified by drag & drop
+                          live builder.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </h5>
+              </a>
+            </div>
+          </div>
+          <div class="basis-6/12 px-5">
+            <div
+              class="flex py-5 h-full px-10 bg-white rounded-lg border border-gray-200 shadow-md"
+            >
+              <a href="#">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight py-1">
+                  <div class="flex items-start">
+                    <button
+                      type="button"
+                      class="text-white bg-[#FFD085] focus:ring-4 focus:ring-blue-300focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="30"
+                        height="30"
+                        fill="none"
+                        viewBox="0 0 34 35"
+                      >
+                        <path
+                          fill="#fff"
+                          fill-rule="evenodd"
+                          d="M3.034 0A3.037 3.037 0 000 3.034v2.342h6.068V3.034A3.038 3.038 0 003.034 0zm26.05 27.574V4A4 4 0 0025.087 0H6.235A4.397 4.397 0 017.45 3.034v28c0 1.631 1.252 3.037 2.881 3.118a3.037 3.037 0 003.187-3.03v-3.546h15.567v-.002zm-15.943-5.07h10.67v1.844H13.14v-1.843zm0-4.53h10.67v1.843H13.14v-1.844zm0-4.533h10.67v1.844H13.14V13.44zm0-4.531h10.67v1.843H13.14V8.91zm0-4.532h10.67v1.843H13.14V4.378zm1.76 24.58v2.164a4.397 4.397 0 01-1.216 3.034h17.281A3.037 3.037 0 0034 31.122v-2.163H14.9z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+
+                    <div class="font-semibold mr-2 px-2.5 py-0.5 ml-3">
+                      <div class="flex flex-col">
+                        <div>List Scroll Effects</div>
+                        <div class="font-normal text-lg py-3 text-slate-500">
+                          8 different scroll effects are ready. You can always
+                          change by your tastes.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </h5>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="p-4 bg-white sm:p-6 dark:bg-gray-900">
+      <div class="mb-6 md:mb-0"></div>
+      <div class="grid grid-cols-2 sm:gap-6 sm:grid-cols-5">
+        <div>
+          <h2
+            class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+          >
+            Home
+          </h2>
+          <ul class="text-gray-600 dark:text-gray-400">
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Home</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Community</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Events</a>
+            </li>
+            <li>
+              <a href="#" class="hover:underline">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2
+            class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+          >
+            Resources
+          </h2>
+          <ul class="text-gray-600 dark:text-gray-400">
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Blog</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">News</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Guides</a>
+            </li>
+            <li>
+              <a href="#" class="hover:underline">Forums</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2
+            class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+          >
+            Community
+          </h2>
+          <ul class="text-gray-600 dark:text-gray-400">
+            <li class="mb-4">
+              <a href="#" class="hover:underline">NewsFeed</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Profile</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Friends</a>
+            </li>
+            <li>
+              <a href="#" class="hover:underline">Help Center</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2
+            class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+          >
+            Main links
+          </h2>
+          <ul class="text-gray-600 dark:text-gray-400">
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Members</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Activity</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Groups</a>
+            </li>
+            <li>
+              <a href="#" class="hover:underline">Private Group</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2
+            class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+          >
+            Subscribe Cirkle Newsletter
+          </h2>
+          <div class="w-46 text-white">
+            Subscribe to be the first one to know about updates. Enter your
+            email
+          </div>
+        </div>
+      </div>
+      <hr
+        class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
+      />
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+          >© 2022
+          <a href="https://github.com/Fahmii19/" class="hover:underline"
+            >Muchamad Fahmi</a
+          >. All Rights Reserved.
+        </span>
+        <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+          <a
+            href="#"
+            class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <span class="sr-only">Facebook page</span>
+          </a>
+          <a
+            href="#"
+            class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <span class="sr-only">Instagram page</span>
+          </a>
+          <a
+            href="#"
+            class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+              ></path>
+            </svg>
+            <span class="sr-only">Twitter page</span>
+          </a>
+          <a
+            href="#"
+            class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <span class="sr-only">GitHub account</span>
+          </a>
+          <a
+            href="#"
+            class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <span class="sr-only">Dribbbel account</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
